@@ -47,15 +47,13 @@ bot.on('message', msg=>{
         return;
     }
     nrMesaje++; 
-
     //Sansa random sa scrie lmao
     if ( Math.random() < 0.05 )
     {
-        const channel = bot.channels.find('name', 'the-great-commander-n-word');
+        const channel = bot.channels.find('name','the-great-commander-n-word');
         channel.send('lmao', { tts: true})
         nrMesaje = 0;
     }
-
     if( msg.member.user.tag == 'Tsunamy99#0070') 
     {
         if (Math.random() < 0.04)
@@ -64,7 +62,6 @@ bot.on('message', msg=>{
             channel.send('clona mea a trimis mesajul');
         }
     }
-
     if( msg.member.user.tag == 'Geo#7073') 
     {
         if (Math.random() < 0.05)
@@ -75,7 +72,6 @@ bot.on('message', msg=>{
                 msg.reply('hai pe Malina!');
         }
     } 
-
     if( msg.member.user.tag == 'chinez.mancator.de.orez#3068') 
     { 
         if (nrMesaje2 % 10 == 0 )
@@ -95,21 +91,18 @@ bot.on('message', msg=>{
                 msg.reply('pentru ca femeile au vieti mai usoare decat barbatii');
         }
     }
-
     if( msg.member.user.tag == 'Pepe Ned#3580') 
     {  
         if ( msg.content.strstr("suck") || msg.content.strstr("bad"))
         {
             channel.send('stfu dani, capul sus ca iti cade coroana regele meu :crown: ');
         }
-
         else if (Math.random() < 0.05)
             {
                 const channel = bot.channels.find('name', 'the-great-commander-n-word');
                 channel.send('dani esti mult prea pur pentru serverul asta'); 
             }
     }
-
     if( msg.member.user.tag == 'Cosmin0123#4724') 
     {  
         if (Math.random() < 0.01)
@@ -118,7 +111,6 @@ bot.on('message', msg=>{
             msg.reply('tata?'); 
         }
     }
-
     if( msg.member.user.tag == 'El RDU#1564') 
     { 
         if (Math.random() < 0.15)
@@ -132,10 +124,9 @@ bot.on('message', msg=>{
             else channel.send('radu te bat');
         }
     }
-
     if( msg.member.user.tag == 'not lue#6251') 
     { 
-        if (Math.random() < 0.08)
+        if (Math.random() < 0.1)
         {
             if (Math.random()<0.5)
                 msg.reply('Da-l afara pe impostor pls');
@@ -143,7 +134,6 @@ bot.on('message', msg=>{
                 channel.send ('\"Sunt italianca si am drepturi\"')
         }
     }
-
     if( msg.member.user.tag == 'maybe doing drugs#3261') 
     {
         if (Math.random() < 0.1)
@@ -152,7 +142,6 @@ bot.on('message', msg=>{
             channel.send('"Hai sa ii dam mute lui alex!". Ups, copiez persoana gresita');
         }
     } 
-
     if( msg.member.user.tag == 'Wircea#0011') 
     {
         if (Math.random() < 0.15)
@@ -165,7 +154,6 @@ bot.on('message', msg=>{
                 channel.send('Mircea doar da-i picioarele inapoi lui Radu');
         }
     } 
-
     if( msg.member.user.tag == 'Reptile#1995')
     {
         if (Math.random() < 0.07)
@@ -174,7 +162,6 @@ bot.on('message', msg=>{
             channel.send('Dex nu mai abuza de mine (last warning)');
         }
     }   
-
     if ( msg.member.user.tag == '♥QueenElizabitch♥#2517' )
     {
         var r = Math.random();
@@ -185,7 +172,6 @@ bot.on('message', msg=>{
         else if (r < 0.08)
             msg.reply('Tu nu aveai niste manute de primit?') 
     }
-
     if ( msg.member.user.tag == 'Beerghelea#5912' )
     {
         if (Math.random() < 0.08)
@@ -193,7 +179,6 @@ bot.on('message', msg=>{
             msg.reply('e ok, eu te apreciez king!');
         }
     }
-
     //Raspunde acordingly
     if( msg.content.strstr("janken") ) 
     { 
@@ -213,36 +198,32 @@ bot.on('message', msg=>{
         else
             setTimeout(function(){ msg.reply('foarfeca'); }, 4500); 
     }
-
     if( msg.content.strstr("ciocolata alba") ) 
     { 
         msg.reply('Yes, fuel me mortal');
     }
+    if (msg.content.strstr("gura")) {
+        channel.send('Ce altceva stii sa faci cu gura aia ?');
+    }
     if (msg.content.strstr("glumit") || msg.content.strstr("glumat")) {
         msg.reply('HAHAHA VATZ PRINZ ? E AMUZANT');
     }
-
     if( msg.content.strstr("troll everyone")) 
     { 
         const channel = bot.channels.find('name', 'the-great-commander-n-word'); 
         channel.send('Virus detected. Please, scan your computer now!', { tts: true}); 
     }
-
     if( ( msg.content.strstr("back") || msg.content.strstr("inapoi") ) && ( msg.content.strstr("welcome") || msg.content.strstr("bun venit") ) ) 
     { 
         msg.reply('Welcome back king!');
     }
-
     if ((msg.content.strstr("ce fac")
         ||msg.content.strstr("ce faceti")) && msg.content.strstr("prieten")) {
         msg.reply('Prietenii tai nu sunt aici, dar daca ti-e dor de ei, ii poti suna.');
     }
-
-    if (msg.content.strstr("lmao")
-        || msg.content.strstr("Lmao")){
+    if (msg.content.strstr("lmao")){
         msg.reply('Ahh, eu voiam sa zic asta :sob: ');
     }
-
     if (msg.content.strstr("hai")) {
         if (testfete(msg) != 1) {
             var r = Math.random()
@@ -258,27 +239,22 @@ bot.on('message', msg=>{
     {
         msg.reply('oh shit, e Diana aici ? *leaves the chat* ');
     }
-
     if ( msg.content.strstr("pwp"))
     {
-        msg.reply('pwp (kill me, this is not a joke)');
+        msg.reply('pwp (pls kill me, this is not a joke)');
     }
-
     if ( msg.content.strstr("ma-ta") || msg.content.strstr("mata") || msg.content.strstr("ma ta"))
     {
         msg.reply('ma-ta ii zici lui ma-ta fa');
     }
-
     if ( msg.content.strstr("handicapat") && msg.member.user.tag == 'chinez.mancator.de.orez#3068' )
     {
         msg.reply('fa proasto, asculta aici...');
     } 
-
     if ( msg.content.strstr("taci") && msg.member.user.tag == 'chinez.mancator.de.orez#3068' )
     {
         msg.reply('make me');
     } 
-
     if ( msg.content.strstr("baby") || msg.content.strstr("bb") || msg.content.strstr("bby") )
     {
         if (testfete(msg)!=1)
@@ -287,16 +263,15 @@ bot.on('message', msg=>{
             msg.reply('Yes sweety ?')
     }
 
-    if ( msg.content.strstr("drepturi") )
+    if ( msg.content.strstr("drepturi"))
     {
         msg.reply('regii mei au drepturi depline, cat timp nu-s feme');
     }
 
-    if ( msg.content.strstr("te bat") )
+    if ( msg.content.strstr("te") && msg.content.strstr("bat"))
     {
         msg.reply('harder daddy (kill me)');
     }
-
     if ( msg.content.strstr("depresiv") 
         || msg.content.strstr("sad")
         || msg.content.strstr("suparat")
@@ -319,23 +294,19 @@ bot.on('message', msg=>{
         const channel = bot.channels.find('name', 'the-great-commander-n-word');
         channel.send('vorbiti de Radu?');
     }
-    
     if ( msg.content.strstr("examen") &&  msg.content.strstr("maine"))
     {           
         msg.reply('bafta la examen my king :hearts: ');
     }
-
     if ( msg.content.strstr("examen") &&  msg.content.strstr("picat"))
     {
         msg.reply('E ok king, il iei data viitoare');
     }
-
     if ( msg.content.strstr("your mom")  
          || msg.content.strstr("mama ta"))
     {
         msg.reply('OOOOOOOOOOO');
     }
-
     if ( msg.content.strstr("i'm dad") 
          || msg.content.strstr("I will not tolerate you saying the words that consist of the letters") )
     {
@@ -357,12 +328,10 @@ bot.on('message', msg=>{
     {
         msg.reply('same frate, full homo tho');
     }
-
     if ( msg.content.strstr("aveti") && msg.content.strstr("de voi") )
     {
         msg.reply('si tu de tine king');
     }
-
     if ( msg.content.strstr("homo") && ( msg.content.strstr("king") || msg.content.strstr("kings") ) )
     {
         msg.reply('always');
@@ -391,19 +360,16 @@ bot.on('message', msg=>{
     {
         msg.reply('vroom');
     }
-
     if ( msg.content.strstr("why not") 
          || msg.content.strstr("de ce nu") )
     {
         msg.reply('Idrk');
     } 
-
     if ( msg.content.strstr("why") 
          || msg.content.strstr("de ce") )
     {
         msg.reply('why not');
     } 
-
     if ( msg.content.strstr("ty")
          ||  msg.content.strstr("thank you")
          ||  msg.content.strstr("ms")
@@ -414,11 +380,9 @@ bot.on('message', msg=>{
         else
             msg.reply('My pleasure king');
     } 
-
     if ( msg.content.strstr("firar") ){  
         msg.reply('la naiba');
     } 
-
     if ( msg.content.strstr("kings") || msg.content.strstr("regi")){  
         if ( Math.random < 0.1)
         {
@@ -427,17 +391,14 @@ bot.on('message', msg=>{
             setTimeout(function(){  msg.reply('ce king!'); }, 3000); 
         }
     } 
-
     if ( msg.content.strstr("we") && msg.content.strstr("fraiere")){  
         msg.reply('we prostule');
     } 
-
     if ( msg.content.strstr("test") ){ 
        const channel = bot.channels.find('name', 'the-great-commander-n-word');
       // channel.join();
        channel.send('testare', { tts: true});
     } 
-
     raduCode(msg);
 }) 
 
@@ -450,32 +411,30 @@ function raduCode(msg){
     
     if ((msg.content.strstr("claudiu") && msg.content.strstr("real"))
         || msg.content.strstr("claudiu bot"))
-        {
+    {
         msg.reply('we da eu m-am luat de doamna ma-ta?');
-        }
+    }
 
     if ( msg.content.strstr("geo"))
-        {
+    {
         msg.reply('Va rog frumos sa nu va mai luati de regele meu');
-        }
+    }
 
     if ( msg.content.strstr("mama") 
         || msg.content.strstr("mama ta"))
-        {
+    {
         msg.reply('am trecut la glume de clasa a 4-a?');
-        }
-
+    }
     if ( msg.content.strstr("cosmin")  
         || msg.content.strstr("Cosmin"))
-        {
+    {
         msg.reply('stai, ala nu era numele meu, nu?');
-        }
-
+    }
     if ( msg.content.strstr("chinez")  
         || msg.content.strstr("chinezoaica"))
-        {
+    {
         msg.reply('deschide ochii fa');
-        }
+    }
 
     if ( msg.content.strstr("mor"))
     {
