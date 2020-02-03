@@ -437,9 +437,7 @@ bot.on('message', msg=>{
     if ( msg.content.strstr("we") && msg.content.strstr("fraiere")){  
         msg.reply('we prostule');
     } 
-    if (msg.content.strstr("test")) {
-        Morning_alarm();
-    }
+
     if ( msg.content.strstr("test") ){ 
        const channel = bot.channels.find('name', 'the-great-commander-n-word');
       // channel.join();
@@ -447,7 +445,7 @@ bot.on('message', msg=>{
     } 
 
     raduCode(msg);
-   
+    Morning_alarm();
 }) 
 
 function raduCode(msg){ 
@@ -542,9 +540,8 @@ function Morning_alarm() {
     var d = new Date();
     var t = d.getTime();
 
-    var y = Math.round(t / hours);
-    y = (y - 8) % 24;
-    channel.send(y);
-   
+    var y = t / hours;
+    if ((y - 18) % 24 == 0)
+        channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
 }
 bot.login(token);
