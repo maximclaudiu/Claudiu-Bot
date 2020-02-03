@@ -3,9 +3,10 @@ const bot = new Discord.Client();
 const token = 'NjcwNzE0MjU3NDQ0MTc1OTEy.Xi9aXQ.2bxWOvIssqkBmP0oTLN7YRLlp_I';
 var nrMesaje = 0;
 var nrMesaje2 = 1;
-const host = '0.0.0.0';
-const port = process.env.PORT || 3000;
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${PORT}`);
+});
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
     console.log("AM VIATA!");
