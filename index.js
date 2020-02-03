@@ -62,7 +62,6 @@ bot.on('message', msg=>{
         {
             const channel = bot.channels.find('name', 'the-great-commander-n-word');
             channel.send('clona mea a trimis mesajul');
-            return ;
         }
     }
 
@@ -90,11 +89,10 @@ bot.on('message', msg=>{
             var r = Math.random();
             if (r < 0.45)
                 msg.reply('oh shit, e diana aici ? *leaves the chat* '); 
-            else if (r < 0.85)
+            else if (r < 0.95)
                 msg.reply('mananci cacat');
             else
                 msg.reply('pentru ca femeile au vieti mai usoare decat barbatii');
-            return;
         }
     }
 
@@ -103,7 +101,6 @@ bot.on('message', msg=>{
         if ( msg.content.strstr("suck") || msg.content.strstr("bad"))
         {
             channel.send('stfu dani, capul sus ca iti cade coroana regele meu :crown: ');
-            return;
         }
 
         else if (Math.random() < 0.05)
@@ -133,7 +130,6 @@ bot.on('message', msg=>{
             else if (r < 0.75)
                 channel.send('RADU OPRESTE-TE');
             else channel.send('radu te bat');
-            return;
         }
     }
 
@@ -145,7 +141,6 @@ bot.on('message', msg=>{
                 msg.reply('Da-l afara pe impostor pls');
             else 
                 channel.send ('\"Sunt italianca si am drepturi\"')
-            return;
         }
     }
 
@@ -287,7 +282,7 @@ bot.on('message', msg=>{
     if ( msg.content.strstr("baby") || msg.content.strstr("bb") || msg.content.strstr("bby") )
     {
         if (testfete(msg)!=1)
-            msg.reply('fk off with that gay shit')
+            msg.reply('Miss me with that gay shit')
         else 
             msg.reply('Yes sweety ?')
     }
@@ -401,7 +396,6 @@ bot.on('message', msg=>{
          || msg.content.strstr("de ce nu") )
     {
         msg.reply('Idrk');
-        return;
     } 
 
     if ( msg.content.strstr("why") 
@@ -445,7 +439,6 @@ bot.on('message', msg=>{
     } 
 
     raduCode(msg);
-   
 }) 
 
 function raduCode(msg){ 
@@ -539,7 +532,7 @@ function Morning_alarm() {
     var d = new Date();
     var t = d.getTime();
     var y = t / hours;
-    if ((y - 18) % 24 == 0)
+    if ((y - 6) % 24 == 0)
         channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
 }
 bot.login(token);
