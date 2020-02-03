@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const token = 'NjcwNzE0MjU3NDQ0MTc1OTEy.Xi9aXQ.2bxWOvIssqkBmP0oTLN7YRLlp_I';
 var nrMesaje = 0;
 var nrMesaje2 = 1;
-var channel = bot.channels.find('name', 'the-great-commander-n-word')
+var channel = bot.channels.get('551498892785614865')
 
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
@@ -331,7 +331,6 @@ bot.on('message', msg=>{
     {
         msg.reply('scroafo');
     }
-
     if ( msg.content.strstr("nb") 
         || msg.content.strstr("noapte buna")
         || msg.content.strstr("gn")
@@ -339,12 +338,10 @@ bot.on('message', msg=>{
     {
         msg.reply('nb king, take care!');
     }
-
     if ( msg.content.strstr("femei") )
     {
         msg.reply('listen here, I will not accept words that start with "f e m e i" on this christian server');
     }
-
     if ( msg.content.strstr("maximobil") )
     {
         msg.reply('vroom');
