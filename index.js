@@ -437,7 +437,9 @@ bot.on('message', msg=>{
     if ( msg.content.strstr("we") && msg.content.strstr("fraiere")){  
         msg.reply('we prostule');
     } 
-
+    if (msg.content.strstr("test")) {
+        Morning_alarm();
+    }
     if ( msg.content.strstr("test") ){ 
        const channel = bot.channels.find('name', 'the-great-commander-n-word');
       // channel.join();
@@ -445,9 +447,7 @@ bot.on('message', msg=>{
     } 
 
     raduCode(msg);
-    if (msg.content.strstr("test")) {
-        Morning_alarm();
-    }
+   
 }) 
 
 function raduCode(msg){ 
@@ -543,9 +543,8 @@ function Morning_alarm() {
     var t = d.getTime();
 
     var y = Math.round(t / hours);
-    if ((y - 8) % 24 == 0) {
-        y = (y - 8) % 24;
-        channel.send(y);
-    }
+    y = (y - 8) % 24;
+    channel.send(y);
+   
 }
 bot.login(token);
