@@ -10,7 +10,7 @@ bot.on('ready', () => {
     console.log("AM VIATA!");
     const channel = bot.channels.find('name', 'the-great-commander-n-word');
     channel.send('Hell yeah, am fost actualizat');
-    setTimeout(function(){ channel.send('Dar nimanui nu-i pasa :sad_yeehaw:'); }, 5000);
+    setTimeout(function(){ channel.send('Dar nimanui nu-i pasa :sob:'); }, 5000);
 });
 
 //Functia pentru strstr + lower
@@ -370,7 +370,7 @@ bot.on('message', msg=>{
         msg.reply('la naiba');
     } 
     if ( msg.content.strstr("kings") || msg.content.strstr("regi")){  
-        if ( Math.random < 0.1)
+        if ( Math.random < 0.2)
         {
             setTimeout(function(){  msg.reply('truuuue!'); }, 1000);
             setTimeout(function(){  msg.reply('truuuue!'); }, 2000);
