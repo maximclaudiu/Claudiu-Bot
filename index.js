@@ -8,8 +8,9 @@ var nrMesaje2 = 1;
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
     console.log("AM VIATA!");
-    channel.send('M-a strigat cineva?');
-    setTimeout(function(){ channel.send('De obicei nu ma striga nimeni'); }, 5000);
+    const channel = bot.channels.find('name', 'the-great-commander-n-word');
+    channel.send('Hell yeah, am fost actualizat');
+    setTimeout(function(){ channel.send('Dar nimanui nu-i pasa :sad_yeehaw:'); }, 5000);
 });
 
 //Functia pentru strstr + lower
