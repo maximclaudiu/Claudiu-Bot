@@ -49,7 +49,7 @@ bot.on('message', msg=>{
     nrMesaje++; 
 
     //Sansa random sa scrie lmao
-    if ( Math.random() < 0.07 )
+    if ( Math.random() < 0.05 )
     {
         const channel = bot.channels.find('name', 'the-great-commander-n-word');
         channel.send('lmao', { tts: true})
@@ -102,7 +102,7 @@ bot.on('message', msg=>{
     {  
         if ( msg.content.strstr("suck") || msg.content.strstr("bad"))
         {
-            msg.reply('stfu dani, capul sus ca iti cade coroana regele meu :crown: ');
+            channel.send('stfu dani, capul sus ca iti cade coroana regele meu :crown: ');
             return;
         }
 
@@ -118,7 +118,7 @@ bot.on('message', msg=>{
         if (Math.random() < 0.01)
         {
             const channel = bot.channels.find('name', 'the-great-commander-n-word');
-            channel.send('tata?'); 
+            msg.reply('tata?'); 
         }
     }
 
@@ -144,14 +144,14 @@ bot.on('message', msg=>{
             if (Math.random()<0.5)
                 msg.reply('Da-l afara pe impostor pls');
             else 
-                msg.reply ('\"Sunt italianca si am drepturi\"')
+                channel.send ('\"Sunt italianca si am drepturi\"')
             return;
         }
     }
 
     if( msg.member.user.tag == 'maybe doing drugs#3261') 
     {
-        if (Math.random() < 0.05)
+        if (Math.random() < 0.1)
         {
             const channel = bot.channels.find('name', 'the-great-commander-n-word');
             channel.send('"Hai sa ii dam mute lui alex!". Ups, copiez persoana gresita');
@@ -160,7 +160,7 @@ bot.on('message', msg=>{
 
     if( msg.member.user.tag == 'Wircea#0011') 
     {
-        if (Math.random() < 0.1)
+        if (Math.random() < 0.15)
         {
             var r = Math.random();
             const channel = bot.channels.find('name', 'the-great-commander-n-word');
@@ -173,7 +173,7 @@ bot.on('message', msg=>{
 
     if( msg.member.user.tag == 'Reptile#1995')
     {
-        if (Math.random() < 0.05)
+        if (Math.random() < 0.07)
         {
             const channel = bot.channels.find('name', 'the-great-commander-n-word');
             channel.send('Dex nu mai abuza de mine (last warning)');
@@ -183,17 +183,17 @@ bot.on('message', msg=>{
     if ( msg.member.user.tag == '♥QueenElizabitch♥#2517' )
     {
         var r = Math.random();
-        if (r < 0.03)
+        if (r < 0.04)
         { 
             msg.reply('Tu nu aveai niste manute de dat?') 
         }
-        else if (r < 0.06)
+        else if (r < 0.08)
             msg.reply('Tu nu aveai niste manute de primit?') 
     }
 
     if ( msg.member.user.tag == 'Beerghelea#5912' )
     {
-        if (Math.random() < 0.05)
+        if (Math.random() < 0.08)
         {
             msg.reply('e ok, eu te apreciez king!');
         }
@@ -310,7 +310,10 @@ bot.on('message', msg=>{
     {
         msg.reply('same frate, same...');
     }
+    if (msg.content.strstr("thot"))
+    {
 
+    }
     if ( msg.content.strstr("thot") )
     {
         msg.reply('IT`S TIME FOR A THOT CRUSADE!');
@@ -442,7 +445,7 @@ bot.on('message', msg=>{
     } 
 
     raduCode(msg);
-
+    Morning_alarm();
 }) 
 
 function raduCode(msg){ 
@@ -493,7 +496,7 @@ function raduCode(msg){
   if ( msg.content.strstr("@") )
   {
         var r = Math.random()
-        if (r<0.1)
+        if (r<0.3)
             msg.reply('lasa omul sa doarma');
       }
   
@@ -527,5 +530,18 @@ function testfete(msg) {
     if (msg.member.user.tag == '♥QueenElizabitch♥#2517')
         return 1;
     return 0;
+}
+function Morning_alarm() {
+    const channel = bot.channels.find('name', 'the-great-commander-n-word');
+    var minutes = 1000 * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var d = new Date();
+    var t = d.getTime();
+
+    var y = Math.round(t / hours);
+    if ((y - 8) / 24 == 0)
+        channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
 }
 bot.login(token);
