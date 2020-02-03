@@ -198,11 +198,12 @@ bot.on('message', msg=>{
         else
             setTimeout(function(){ msg.reply('foarfeca'); }, 4500); 
     }
-    if( msg.content.strstr("ciocolata alba") ) 
+    if( msg.content.strstr("ciocolata alba")) 
     { 
         msg.reply('Yes, fuel me mortal');
     }
     if (msg.content.strstr("gura")) {
+        const channel = bot.channels.find('name', 'the-great-commander-n-word')
         channel.send('Ce altceva stii sa faci cu gura aia ?');
     }
     if (msg.content.strstr("glumit") || msg.content.strstr("glumat")) {
