@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const token = 'NjcwNzE0MjU3NDQ0MTc1OTEy.Xi9aXQ.2bxWOvIssqkBmP0oTLN7YRLlp_I';
 var nrMesaje = 0;
 var nrMesaje2 = 1;
-
+const channel = bot.channels.find('name', 'the-great-commander-n-word')
 
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
@@ -50,7 +50,6 @@ bot.on('message', msg=>{
     //Sansa random sa scrie lmao
     if ( Math.random() < 0.05 )
     {
-        const channel = bot.channels.find('name','the-great-commander-n-word');
         channel.send('lmao', { tts: true})
         nrMesaje = 0;
     }
@@ -58,7 +57,6 @@ bot.on('message', msg=>{
     {
         if (Math.random() < 0.04)
         {
-            const channel = bot.channels.find('name', 'the-great-commander-n-word');
             channel.send('clona mea a trimis mesajul');
         }
     }
@@ -76,7 +74,6 @@ bot.on('message', msg=>{
     { 
         if (nrMesaje2 % 10 == 0 )
         {
-            const channel = bot.channels.find('name', 'the-great-commander-n-word');
             channel.send("sa moara jacsana de nu esti enervanta diana")
             nrMesaje2++;
         } 
@@ -99,7 +96,6 @@ bot.on('message', msg=>{
         }
         else if (Math.random() < 0.05)
             {
-                const channel = bot.channels.find('name', 'the-great-commander-n-word');
                 channel.send('dani esti mult prea pur pentru serverul asta'); 
             }
     }
@@ -107,8 +103,7 @@ bot.on('message', msg=>{
     {  
         if (Math.random() < 0.01)
         {
-            const channel = bot.channels.find('name', 'the-great-commander-n-word');
-            msg.reply('tata?'); 
+           msg.reply('tata?'); 
         }
     }
     if( msg.member.user.tag == 'El RDU#1564') 
@@ -116,8 +111,7 @@ bot.on('message', msg=>{
         if (Math.random() < 0.15)
         {
             var r = Math.random();
-            const channel = bot.channels.find('name', 'the-great-commander-n-word');
-            if (r < 0.5)
+           if (r < 0.5)
                 channel.send('iti fut una Radu');
             else if (r < 0.75)
                 channel.send('RADU OPRESTE-TE');
@@ -138,7 +132,6 @@ bot.on('message', msg=>{
     {
         if (Math.random() < 0.1)
         {
-            const channel = bot.channels.find('name', 'the-great-commander-n-word');
             channel.send('"Hai sa ii dam mute lui alex!". Ups, copiez persoana gresita');
         }
     } 
@@ -147,7 +140,6 @@ bot.on('message', msg=>{
         if (Math.random() < 0.15)
         {
             var r = Math.random();
-            const channel = bot.channels.find('name', 'the-great-commander-n-word');
             if (r<0.5)
                 channel.send('Mircea ai mila de Radu');
             else 
@@ -158,7 +150,6 @@ bot.on('message', msg=>{
     {
         if (Math.random() < 0.07)
         {
-            const channel = bot.channels.find('name', 'the-great-commander-n-word');
             channel.send('Dex nu mai abuza de mine (last warning)');
         }
     }   
@@ -203,7 +194,6 @@ bot.on('message', msg=>{
         msg.reply('Yes, fuel me mortal');
     }
     if (msg.content.strstr("gura")) {
-        const channel = bot.channels.find('name', 'the-great-commander-n-word')
         channel.send('Ce altceva stii sa faci cu gura aia ?');
     }
     if (msg.content.strstr("glumit") || msg.content.strstr("glumat")) {
@@ -211,7 +201,6 @@ bot.on('message', msg=>{
     }
     if( msg.content.strstr("troll everyone")) 
     { 
-        const channel = bot.channels.find('name', 'the-great-commander-n-word'); 
         channel.send('Virus detected. Please, scan your computer now!', { tts: true}); 
     }
     if( ( msg.content.strstr("back") || msg.content.strstr("inapoi") ) && ( msg.content.strstr("welcome") || msg.content.strstr("bun venit") ) ) 
@@ -292,7 +281,6 @@ bot.on('message', msg=>{
 
     if ( msg.content.strstr("trash") || msg.content.strstr("gunoi")  )
     {
-        const channel = bot.channels.find('name', 'the-great-commander-n-word');
         channel.send('vorbiti de Radu?');
     }
     if ( msg.content.strstr("examen") &&  msg.content.strstr("maine"))
@@ -396,7 +384,6 @@ bot.on('message', msg=>{
         msg.reply('we prostule');
     } 
     if ( msg.content.strstr("test") ){ 
-       const channel = bot.channels.find('name', 'the-great-commander-n-word');
       // channel.join();
        channel.send('testare', { tts: true});
     } 
