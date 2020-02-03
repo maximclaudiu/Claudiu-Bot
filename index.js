@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const token = 'NjcwNzE0MjU3NDQ0MTc1OTEy.Xi9aXQ.2bxWOvIssqkBmP0oTLN7YRLlp_I';
 var nrMesaje = 0;
 var nrMesaje2 = 1;
-var channel = 551498892785614865;
+const channel = server.channels.find('name', 'the-great-commander-n-word');
 
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
@@ -172,6 +172,7 @@ bot.on('message', msg=>{
     //Raspunde acordingly
     if( msg.content.strstr("janken") ) 
     { 
+        const channel = bot.channels.find('name', 'the-great-commander-n-word')
         setTimeout(function(){ channel.send('3'); }, 1000);
         setTimeout(function(){ channel.send('2'); }, 2000);
         setTimeout(function(){ channel.send('1'); }, 3000);
