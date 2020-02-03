@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const token = 'NjcwNzE0MjU3NDQ0MTc1OTEy.Xi9aXQ.2bxWOvIssqkBmP0oTLN7YRLlp_I';
 var nrMesaje = 0;
 var nrMesaje2 = 1;
-const channel = server.channels.find('name', 'the-great-commander-n-word');
+
 
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
@@ -39,7 +39,7 @@ String.prototype.strstr = function(search) {
 Morning_alarm();
 bot.on('message', msg=>{    
     msg.content = msg.content.toLowerCase();
-    
+    const channel = bot.channels.find('name', 'the-great-commander-n-word');
     //UITA-TE LA CINE A TRIMIS MESAJUL  
     if( msg.member.user.tag == 'Claudiu Bot#0323') 
     {
