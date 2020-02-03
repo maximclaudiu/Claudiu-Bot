@@ -37,7 +37,7 @@ String.prototype.strstr = function(search) {
     return false;
 };
 
-
+Morning_alarm();
 bot.on('message', msg=>{    
     msg.content = msg.content.toLowerCase();
     
@@ -445,7 +445,7 @@ bot.on('message', msg=>{
     } 
 
     raduCode(msg);
-    Morning_alarm();
+   
 }) 
 
 function raduCode(msg){ 
@@ -520,7 +520,6 @@ function raduCode(msg){
       {
          msg.reply('degeaba daca nu e manea...');
       }  
-
 }
 function testfete(msg) {
     if (msg.member.user.tag == 'not lue#6251')
@@ -539,7 +538,6 @@ function Morning_alarm() {
     var years = days * 365;
     var d = new Date();
     var t = d.getTime();
-
     var y = t / hours;
     if ((y - 18) % 24 == 0)
         channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
