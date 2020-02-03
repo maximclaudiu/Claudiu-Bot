@@ -8,7 +8,6 @@ var channel = bot.channels.get('551498892785614865')
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
     console.log("AM VIATA!");
-    const channel = bot.channels.find('name', 'the-great-commander-n-word');
     //channel.send('M-a strigat cineva?');
     //setTimeout(function(){ channel.send('De obicei nu ma striga nimeni'); }, 5000);
 });
@@ -173,7 +172,6 @@ bot.on('message', msg=>{
     //Raspunde acordingly
     if( msg.content.strstr("janken") ) 
     { 
-        const channel = bot.channels.find('name', 'the-great-commander-n-word')
         setTimeout(function(){ channel.send('3'); }, 1000);
         setTimeout(function(){ channel.send('2'); }, 2000);
         setTimeout(function(){ channel.send('1'); }, 3000);
@@ -468,7 +466,6 @@ function testfete(msg) {
     return 0;
 }
 function Morning_alarm() {
-    const channel = bot.channels.find('name', 'the-great-commander-n-word');
     var minutes = 1000 * 60;
     var hours = minutes * 60;
     var days = hours * 24;
