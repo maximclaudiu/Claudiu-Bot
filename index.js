@@ -445,7 +445,9 @@ bot.on('message', msg=>{
     } 
 
     raduCode(msg);
-    Morning_alarm();
+    if (msg.content.strstr("test")) {
+        Morning_alarm();
+    }
 }) 
 
 function raduCode(msg){ 
@@ -541,7 +543,9 @@ function Morning_alarm() {
     var t = d.getTime();
 
     var y = Math.round(t / hours);
-    if ((y - 8) / 24 == 0)
-        channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
+    if ((y - 8) % 24 == 0) {
+        y = (y - 8) % 24;
+        channel.send(y);
+    }
 }
 bot.login(token);
