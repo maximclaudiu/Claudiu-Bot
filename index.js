@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const token = 'NjcwNzE0MjU3NDQ0MTc1OTEy.Xi9aXQ.2bxWOvIssqkBmP0oTLN7YRLlp_I';
 var nrMesaje = 0;
 var nrMesaje2 = 1;
-const PORT = process.env.PORT || 3000;
+
 
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
