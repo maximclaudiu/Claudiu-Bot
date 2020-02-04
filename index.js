@@ -35,6 +35,7 @@ String.prototype.strstr = function(search) {
 setInterval(Morning_alarm, min);
 bot.on('message', msg=>{    
     msg.content = msg.content.toLowerCase();
+    var trimis;
     const channel = bot.channels.find('name', 'the-great-commander-n-word');
     //UITA-TE LA CINE A TRIMIS MESAJUL  
     if( msg.member.user.tag == 'Claudiu Bot#0323') 
@@ -46,10 +47,13 @@ bot.on('message', msg=>{
 
     }
     //Sansa random sa scrie lmao
-    if (Math.random() <nrMesaje / 100) {
+    if (Math.random() < nrMesaje / 100 && trimis == 1) {
         channel.send('Ma simt abuzat :worried:');
         nrMesaje = 0;
+        trimis = 0;
     }
+    else trimis = 0;
+    
     if( msg.member.user.tag == 'Tsunamy99#0070') 
     {
         if (Math.random() < 0.04)
@@ -195,12 +199,14 @@ bot.on('message', msg=>{
     }
     if( msg.content.strstr("ciocolata alba")) 
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('Yes, fuel me mortal');
     }
     if ((msg.content.strstr("hai") && msg.content.strstr("lol")) || msg.content.strstr("league")
         || msg.content.strstr('ligo'))
     {
+        trimis = 1;
         nrMesaje++;
         if (Math.random() < 0.4)
             channel.send('Iar jucati mizeria aia ?');
@@ -208,35 +214,42 @@ bot.on('message', msg=>{
     }
     if (msg.content.strstr("gura"))
     {
+        trimis = 1;
         nrMesaje++;
         channel.send('Ce altceva stii sa faci cu gura aia ?');
     }
     if (msg.content.strstr("glumit") || msg.content.strstr("glumat"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('HAHAHA VATZ PRINZ ? E AMUZANT');
     }
     if( msg.content.strstr("troll everyone")) 
     {
+        trimis = 1;
         nrMesaje++;
         channel.send('Virus detected. Please, scan your computer now!', { tts: true}); 
     }
     if( ( msg.content.strstr("back") || msg.content.strstr("inapoi") ) && ( msg.content.strstr("welcome") || msg.content.strstr("bun venit") ) ) 
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('Welcome back king!');
     }
     if (msg.content.strstr("prieteni"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('Prietenii tai nu sunt aici, dar daca ti-e dor de ei, ii poti suna.');
     }
     if (msg.content.strstr("lmao"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('Ahh, eu voiam sa zic asta :sob: ');
     }
     if (msg.content.strstr("hai")) {
+        trimis = 1;
         nrMesaje++;
         if (Math.random()<0.8)
             if (testfete(msg) != 1) {
@@ -251,6 +264,7 @@ bot.on('message', msg=>{
     }
     if ( msg.content.strstr("diana") || msg.content.strstr("chinez"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('oh shit, e Diana aici ? *leaves the chat* ');
     }
@@ -260,21 +274,25 @@ bot.on('message', msg=>{
     }
     if ( msg.content.strstr("ma-ta") || msg.content.strstr("mata") || msg.content.strstr("ma ta"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('ma-ta ii zici lui ma-ta fa');
     }
     if ( msg.content.strstr("handicapat"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('fa proasto, asculta aici...');
     } 
     if ( msg.content.strstr("taci") && msg.member.user.tag == 'chinez.mancator.de.orez#3068' )
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('make me');
     } 
     if ( msg.content.strstr("baby") || msg.content.strstr("bb") || msg.content.strstr("bby") )
     {
+        trimis = 1;
         nrMesaje++;
         if (testfete(msg)!=1)
             msg.reply('Miss me with that gay shit')
@@ -283,17 +301,20 @@ bot.on('message', msg=>{
     }
     if (msg.content.strstr("vroiam"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply("\"voiam\"*");
     }
         if (msg.content.strstr("drepturi"))
     {
-        nrMesaje++;
+            trimis = 1;
+            nrMesaje++;
         msg.reply('regii mei au drepturi depline, cat timp nu-s feme');
     }
 
     if ((msg.content.strstr("te") && msg.content.strstr("bat")) || msg.content.strstr('bataie'))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('harder daddy (pls kill me)');
     }
@@ -311,6 +332,7 @@ bot.on('message', msg=>{
     }
     if ( msg.content.strstr("trash") || msg.content.strstr("gunoi")  )
     {
+        trimis = 1;
         nrMesaje++;
         channel.send('vorbiti de Radu?');
     }
@@ -325,6 +347,7 @@ bot.on('message', msg=>{
     if ( msg.content.strstr("your mom")  
          || msg.content.strstr("mama ta"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('OOOOOOOOOOO');
     }
@@ -336,6 +359,7 @@ bot.on('message', msg=>{
 
     if (msg.content.strstr("prostule"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('Taci fa din gura!!');
     }
@@ -343,12 +367,14 @@ bot.on('message', msg=>{
     if (msg.content.strstr("mare")
         ||msg.content.strstr("big"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('Ma intreb ce altceva mai e mare, hmm...');
     }
 
     if ( msg.content.strstr("iubesc") && ( msg.content.strstr("claudiu") || msg.content.strstr("botu") || msg.content.strstr("botul") ) )
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('same frate, full homo tho');
     }
@@ -358,6 +384,7 @@ bot.on('message', msg=>{
     }
     if ( msg.content.strstr("homo") && ( msg.content.strstr("king") || msg.content.strstr("kings") ) )
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('always');
     } 
@@ -365,6 +392,7 @@ bot.on('message', msg=>{
     if ( ( msg.content.strstr("bou") || msg.content.strstr("porc") )
              &&  msg.member.user.tag == 'chinez.mancator.de.orez#3068' )
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('scroafo');
     }
@@ -377,23 +405,27 @@ bot.on('message', msg=>{
     }
     if ( msg.content.strstr("femei") )
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('listen here, I will not accept words that start with "f e m e i" on this christian server');
     }
     if ( msg.content.strstr("maximobil") )
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('vroom');
     }
     if ( msg.content.strstr("why not") 
          || msg.content.strstr("de ce nu") )
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('Idrk');
     } 
     if ( msg.content.strstr("why") 
          || msg.content.strstr("de ce") )
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('why not');
     } 
@@ -403,6 +435,7 @@ bot.on('message', msg=>{
          ||  msg.content.strstr("multumesc")
         || msg.content.strstr("merci"))
     {
+        trimis = 1;
         nrMesaje++;
         if (Math.random() < 0.08)
             msg.reply('iti multumesti si tie')
@@ -411,11 +444,13 @@ bot.on('message', msg=>{
     } 
     if (msg.content.strstr("imagine"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('Da frate, cum ar fi...');
     }
     if (msg.content.strstr("firar"))
     {
+        trimis = 1;
         nrMesaje++;  
         msg.reply('la naiba');
     } 
@@ -426,6 +461,7 @@ bot.on('message', msg=>{
     } 
     if (msg.content.strstr("we") && msg.content.strstr("fraiere"))
     {
+        trimis = 1;
         nrMesaje++;  
         msg.reply('we prostule');
     } 
@@ -440,6 +476,7 @@ function raduCode(msg){
 
     if ( msg.content.strstr("mugur"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('wooow, thats kinda gay, ngl');
     }
@@ -447,12 +484,14 @@ function raduCode(msg){
     if ((msg.content.strstr("claudiu") && msg.content.strstr("real"))
         || msg.content.strstr("claudiu bot"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('we da eu m-am luat de doamna ma-ta?');
     }
 
     if ( msg.content.strstr("geo"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('Va rog frumos sa nu va mai luati de regele meu');
     }
@@ -460,22 +499,26 @@ function raduCode(msg){
     if ( msg.content.strstr("mama") 
         || msg.content.strstr("mama ta"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('am trecut la glume de clasa a 4-a?');
     }
     if ( msg.content.strstr("cosmin"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('stai, ala nu era numele meu, nu?');
     }
     if ( msg.content.strstr("chinez"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('deschide ochii fa');
     }
 
     if ( msg.content.strstr("mor"))
     {
+        trimis = 1;
         nrMesaje++;
         var r = Math.random();
         if (r<0.5)
@@ -488,12 +531,14 @@ function raduCode(msg){
     {
         var r = Math.random()
         if (r < 0.3) {
+            trimis = 1;
             nrMesaje++;
             msg.reply('lasa omul sa doarma');
         }
     }
     if ( msg.content.strstr("fa "))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('fa sa-i zici lui ma-ta auzi fa?');
     }
@@ -504,6 +549,7 @@ function raduCode(msg){
     if (msg.content.strstr("7")
         || msg.content.strstr("1 2"))
     {
+        trimis = 1;
         nrMesaje++;
         msg.reply('inverci sa inveti sa numeri?');
     }
