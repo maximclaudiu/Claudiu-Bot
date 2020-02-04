@@ -577,7 +577,7 @@ function Morning_alarm() {
     var t = d.getTime();
     var y = t / hours;
     const channel = bot.channels.find('name', 'the-great-commander-n-word');
-    if ((y - 6) % 24 > -0.1 && (y - 6) % 24 < 0.1)
+    if ((y - 6) % 24 > -0.06 && (y - 6) % 24 < 0.06)
         channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
 }
 
