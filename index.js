@@ -165,12 +165,13 @@ bot.on('message', msg=>{
     if ( msg.member.user.tag == '♥QueenElizabitch♥#2517' )
     {
         var r = Math.random();
-        if (r < 0.04)
-        { 
-            msg.reply('Tu nu aveai niste manute de dat?') 
+        if (r < 0.03) {
+            msg.reply('Tu nu aveai niste manute de dat?')
         }
-        else if (r < 0.08)
-            msg.reply('Tu nu aveai niste manute de primit?') 
+        else if (r < 0.07)
+            msg.reply('Tu nu aveai niste manute de primit?')
+        else if (r < 0.1)
+            msg.reply('iti pare scuze');
     }
     if ( msg.member.user.tag == 'Beerghelea#5912' )
     {
@@ -427,6 +428,10 @@ bot.on('message', msg=>{
         nrMesaje++;
         msg.reply('vroom');
     }
+    if (msg.content.strstr("iarta") ||(msg.content.strstr("pare rau")))
+    {
+        msg.reply('Iti pare scuze ??');
+    }
     if ( msg.content.strstr("why not") 
          || msg.content.strstr("de ce nu") )
     {
@@ -466,7 +471,7 @@ bot.on('message', msg=>{
         nrMesaje++;  
         msg.reply('la naiba');
     } 
-    if ( msg.content.strstr("king moment")){  
+    if (msg.content.strstr("king moment") || msg.content.strstr("ce o zis")){  
         setTimeout(function(){  msg.reply('truuuue!'); }, 1000);
         setTimeout(function(){  msg.reply('truuuue!'); }, 2000);
         setTimeout(function(){  msg.reply('ce king!'); }, 3000); 
@@ -500,14 +505,16 @@ function raduCode(msg){
         nrMesaje++;
         msg.reply('we da eu m-am luat de doamna ma-ta?');
     }
-
     if ( msg.content.strstr("geo"))
     {
         countInsulta = 1;
         nrMesaje++;
         msg.reply('Va rog frumos sa nu va mai luati de regele meu');
     }
-
+    if (msg.content.strstr("rip"))
+    {
+        msg.reply('E ok, e si maine o zi');
+    } 
     if ( msg.content.strstr("mama") 
         || msg.content.strstr("mama ta"))
     {
@@ -527,7 +534,6 @@ function raduCode(msg){
         nrMesaje++;
         msg.reply('deschide ochii fa');
     }
-
     if ( msg.content.strstr("mor"))
     {
         countInsulta = 1;
