@@ -122,7 +122,7 @@ bot.on('message', msg=>{
     }
     if( msg.member.user.tag == 'not lue#6251') 
     { 
-        if (Math.random() < 0.10)
+        if (Math.random() < 0.9)
         {
             if (Math.random()<0.3)
                 msg.reply('Da-l afara pe impostor pls');
