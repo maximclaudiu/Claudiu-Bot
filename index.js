@@ -78,9 +78,8 @@ bot.on('message', msg=>{
         if (nrMesaje2 % 15 == 0 )
         {
             channel.send("sa moara jacsana de nu esti enervanta diana");
-            return;
         } 
-        if (Math.random() < 0.1)
+        else if (Math.random() < 0.1)
         {
             var r = Math.random();
             if (r < 0.45)
@@ -243,15 +242,17 @@ bot.on('message', msg=>{
         msg.reply('Ahh, eu voiam sa zic asta :sob: ');
     }
     if (msg.content.strstr("hai")) {
-        if (testfete(msg) != 1) {
-            var r = Math.random()
-            if (r < 0.33)
-                msg.reply('Hai sa ii dam bully Malinei!');
-            else if (r < 0.66)
-                msg.reply('Hai sa ii dam bully Dianei!');
-            else
-                msg.reply('Hai sa ii dam bully Anei!');
-        }
+        nrMesaje++;
+        if (Math.random()<0.8)
+            if (testfete(msg) != 1) {
+                var r = Math.random()
+                if (r < 0.33)
+                    msg.reply('Hai sa ii dam bully Malinei!');
+                else if (r < 0.66)
+                    msg.reply('Hai sa ii dam bully Dianei!');
+                else
+                    msg.reply('Hai sa ii dam bully Anei!');
+            }
     }
     if ( msg.content.strstr("diana") || msg.content.strstr("chinez"))
     {
@@ -267,7 +268,7 @@ bot.on('message', msg=>{
         nrMesaje++;
         msg.reply('ma-ta ii zici lui ma-ta fa');
     }
-    if ( msg.content.strstr("handicapat") && msg.member.user.tag == 'chinez.mancator.de.orez#3068' )
+    if ( msg.content.strstr("handicapat"))
     {
         nrMesaje++;
         msg.reply('fa proasto, asculta aici...');
@@ -285,17 +286,21 @@ bot.on('message', msg=>{
         else 
             msg.reply('Yes sweety ?')
     }
-
-    if ( msg.content.strstr("drepturi"))
+    if (msg.content.strstr("vroiam"))
+    {
+        nrMesaje++;
+        msg.reply("\"voiam\"*");
+    }
+        if (msg.content.strstr("drepturi"))
     {
         nrMesaje++;
         msg.reply('regii mei au drepturi depline, cat timp nu-s feme');
     }
 
-    if ( msg.content.strstr("te") && msg.content.strstr("bat"))
+    if ((msg.content.strstr("te") && msg.content.strstr("bat")) || msg.content.strstr('bataie'))
     {
         nrMesaje++;
-        msg.reply('harder daddy (kill me)');
+        msg.reply('harder daddy (pls kill me)');
     }
     if ( msg.content.strstr("depresiv") 
         || msg.content.strstr("sad")
@@ -309,7 +314,6 @@ bot.on('message', msg=>{
     {
         msg.reply('IT`S TIME FOR A THOT CRUSADE!');
     }
-
     if ( msg.content.strstr("trash") || msg.content.strstr("gunoi")  )
     {
         nrMesaje++;
@@ -410,6 +414,11 @@ bot.on('message', msg=>{
         else
             msg.reply('My pleasure king');
     } 
+    if (msg.content.strstr("imagine"))
+    {
+        nrMesaje++;
+        msg.reply('Da frate, cum ar fi...');
+    }
     if (msg.content.strstr("firar"))
     {
         nrMesaje++;  
