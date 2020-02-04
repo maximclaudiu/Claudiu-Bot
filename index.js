@@ -122,7 +122,7 @@ bot.on('message', msg=>{
     }
     if( msg.member.user.tag == 'not lue#6251') 
     { 
-        if (Math.random() < 0.12)
+        if (Math.random() < 0.10)
         {
             if (Math.random()<0.3)
                 msg.reply('Da-l afara pe impostor pls');
@@ -296,7 +296,7 @@ bot.on('message', msg=>{
         nrMesaje++;
         msg.reply('fa proasto, asculta aici...');
     } 
-    if ( msg.content.strstr("taci") && msg.member.user.tag == 'chinez.mancator.de.orez#3068' )
+    if ( msg.content.strstr("taci"))
     {
         countInsulta = 1;
         nrMesaje++;
