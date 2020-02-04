@@ -6,6 +6,7 @@ var nrMesaje2 = 1;
 var sec = 1000;
 var min = 60 * sec;
 var hour = min * 60;
+var janken = 0;
 
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
@@ -187,18 +188,25 @@ bot.on('message', msg=>{
         setTimeout(function(){ channel.send('1'); }, 3000);
         if (msg.member.user.tag == 'not lue#6251' || msg.member.user.tag == 'El RDU#1564')
         {
+            janken = 1;
             return;
         }
         else
             setTimeout(function(){ msg.reply('foarfeca'); }, 4500); 
     }
-    if (msg.content.strstr("piatra"))
+    if (msg.content.strstr("piatra") && janken == 1) {
         channel.send('hartie');
-    if (msg.content.strstr("foarfeca") || msg.content.strstr("foarfece"))
+        janke = 0;
+    }
+    if ((msg.content.strstr("foarfeca") || msg.content.strstr("foarfece")) && janken == 1) {
         channel.send('piatra');
-    if (msg.content.strstr("hartie") || msg.content.strstr("plasa"))
+        janken = 0;
+    }
+    if ((msg.content.strstr("hartie") || msg.content.strstr("plasa")) && janken == 1) {
         channel.send('foarfeca');
-    if( msg.content.strstr("ciocolata alba")) 
+        janken = 0;
+    }
+        if (msg.content.strstr("ciocolata alba")) 
     {
         countInsulta = 1;
         nrMesaje++;
