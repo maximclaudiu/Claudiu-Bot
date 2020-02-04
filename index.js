@@ -187,16 +187,17 @@ bot.on('message', msg=>{
         setTimeout(function(){ channel.send('1'); }, 3000);
         if (msg.member.user.tag == 'not lue#6251' || msg.member.user.tag == 'El RDU#1564')
         {
-            if (msg.content.strstr("piatra"))
-                channel.send('hartie');
-            if (msg.content.strstr("foarfeca") || msg.content.strstr("foarfece"))
-                channel.send('piatra');
-            if (msg.content.strstr("hartie") || msg.content.strstr("plasa"))
-                channel.send('foarfeca');
+            return;
         }
         else
             setTimeout(function(){ msg.reply('foarfeca'); }, 4500); 
     }
+    if (msg.content.strstr("piatra"))
+        channel.send('hartie');
+    if (msg.content.strstr("foarfeca") || msg.content.strstr("foarfece"))
+        channel.send('piatra');
+    if (msg.content.strstr("hartie") || msg.content.strstr("plasa"))
+        channel.send('foarfeca');
     if( msg.content.strstr("ciocolata alba")) 
     {
         countInsulta = 1;
