@@ -197,14 +197,17 @@ bot.on('message', msg=>{
     if (msg.content.strstr("piatra") && janken == 1) {
         channel.send('hartie');
         janke = 0;
+        setTimeout(function () { channel.send('ez pz'); }, 1000);
     }
     if ((msg.content.strstr("foarfeca") || msg.content.strstr("foarfece")) && janken == 1) {
         channel.send('piatra');
         janken = 0;
+        setTimeout(function () { channel.send('ez pz'); }, 1000);
     }
     if ((msg.content.strstr("hartie") || msg.content.strstr("plasa")) && janken == 1) {
         channel.send('foarfeca');
         janken = 0;
+        setTimeout(function () { channel.send('ez pz'); }, 1000);
     }
         if (msg.content.strstr("ciocolata alba")) 
     {
