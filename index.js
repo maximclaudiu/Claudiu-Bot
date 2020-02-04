@@ -12,8 +12,8 @@ var janken = 0;
 bot.on('ready', () => {
     console.log("AM VIATA!");
     const channel = bot.channels.find('name', 'the-great-commander-n-word');
-   // channel.send('Hell yeah, am fost actualizat');
-   // setTimeout(function(){ channel.send('Dar nimanui nu-i pasa :sob:'); }, 4000);
+    channel.send('Hell yeah, am fost actualizat');
+    setTimeout(function(){ channel.send('Dar nimanui nu-i pasa :sob:'); }, 4000);
 });
 
 //Functia pentru strstr + lower
@@ -33,6 +33,7 @@ String.prototype.strstr = function(search) {
         return true;
     return false;
 };
+//Top of the morning to you ladies
 setInterval(Morning_alarm, min);
 bot.on('message', msg=>{    
     msg.content = msg.content.toLowerCase();
@@ -497,7 +498,6 @@ function raduCode(msg){
         nrMesaje++;
         msg.reply('wooow, thats kinda gay, ngl');
     }
-    
     if ((msg.content.strstr("claudiu") && msg.content.strstr("real"))
         || msg.content.strstr("claudiu bot"))
     {
@@ -544,7 +544,6 @@ function raduCode(msg){
         else 
             msg.reply('mai bine tu decat eu...');
     }
-  
     if (msg.content.strstr("@"))
     {
         var r = Math.random()
@@ -571,11 +570,10 @@ function raduCode(msg){
         nrMesaje++;
         msg.reply('inverci sa inveti sa numeri?');
     }
-  
-  if ( msg.content.strstr("-p") )
-      {
-         msg.reply('degeaba daca nu e manea...');
-      }  
+    if ( msg.content.strstr("-p") )
+    {
+        msg.reply('degeaba daca nu e manea...');
+    }  
 }
 function testfete(msg) {
     if (msg.member.user.tag == 'not lue#6251')
