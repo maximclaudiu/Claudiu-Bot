@@ -4,7 +4,6 @@ const token = 'NjcwNzE0MjU3NDQ0MTc1OTEy.Xi9aXQ.2bxWOvIssqkBmP0oTLN7YRLlp_I';
 var nrMesaje = 0;
 var nrMesaje2 = 1;
 
-
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
     console.log("AM VIATA!");
@@ -48,9 +47,13 @@ bot.on('message', msg=>{
     }
     nrMesaje++; 
     //Sansa random sa scrie lmao
-    if ( Math.random() < 0.05 )
+    if ( Math.random() < 0.04 )
     {
         channel.send('lmao', { tts: true})
+     
+    }
+    if (Math.random() < 0.01 + nrMesaje / 100) {
+        channel.send('Ma simt abuzat :worried');
         nrMesaje = 0;
     }
     if( msg.member.user.tag == 'Tsunamy99#0070') 
@@ -72,10 +75,11 @@ bot.on('message', msg=>{
     } 
     if( msg.member.user.tag == 'chinez.mancator.de.orez#3068') 
     { 
-        if (nrMesaje2 % 10 == 0 )
+        nrMesaje2++;
+        if (nrMesaje2 % 15 == 0 )
         {
-            channel.send("sa moara jacsana de nu esti enervanta diana")
-            nrMesaje2++;
+            channel.send("sa moara jacsana de nu esti enervanta diana");
+            return;
         } 
         if (Math.random() < 0.1)
         {
@@ -120,20 +124,27 @@ bot.on('message', msg=>{
     }
     if( msg.member.user.tag == 'not lue#6251') 
     { 
-        if (Math.random() < 0.1)
+        if (Math.random() < 0.12)
         {
-            if (Math.random()<0.5)
+            if (Math.random()<0.3)
                 msg.reply('Da-l afara pe impostor pls');
+            else if (Math.random()<0.6)
+                channel.send('\"Sunt italianca si am drepturi\"')
             else 
-                channel.send ('\"Sunt italianca si am drepturi\"')
+                channel.send ('Oh nu, iar imi iau bully :worried:')
         }
     }
     if( msg.member.user.tag == 'maybe doing drugs#3261') 
     {
-        if (Math.random() < 0.1)
-        {
-            channel.send('"Hai sa ii dam mute lui alex!". Ups, copiez persoana gresita');
+        if (Math.random() < 0.1) {
+            if (Math.random() < 0.5) {
+                channel.send('"Hai sa ii dam mute lui alex!". Ups, copiez persoana gresita');
+                return;
+            }
+            else
+                channel.send('Give me the plant!');
         }
+
     } 
     if( msg.member.user.tag == 'Wircea#0011') 
     {
@@ -193,6 +204,12 @@ bot.on('message', msg=>{
     { 
         msg.reply('Yes, fuel me mortal');
     }
+    if ((msg.content.strstr("hai") && msg.content.strstr("lol")) || msg.content.strstr("league")
+        || msg.content.strstr('ligo')) {
+        if (Math.random() < 0.4)
+            channel.send('Iar jucati mizeria aia ?');
+        return;
+    }
     if (msg.content.strstr("gura")) {
         channel.send('Ce altceva stii sa faci cu gura aia ?');
     }
@@ -207,8 +224,7 @@ bot.on('message', msg=>{
     { 
         msg.reply('Welcome back king!');
     }
-    if ((msg.content.strstr("ce fac")
-        ||msg.content.strstr("ce faceti")) && msg.content.strstr("prieten")) {
+    if ( msg.content.strstr("prieteni")) {
         msg.reply('Prietenii tai nu sunt aici, dar daca ti-e dor de ei, ii poti suna.');
     }
     if (msg.content.strstr("lmao")){
@@ -269,10 +285,6 @@ bot.on('message', msg=>{
         || msg.content.strstr("urat"))
     {
         msg.reply('same frate, same...');
-    }
-    if (msg.content.strstr("thot"))
-    {
-
     }
     if ( msg.content.strstr("thot") )
     {
@@ -369,7 +381,7 @@ bot.on('message', msg=>{
     if ( msg.content.strstr("firar") ){  
         msg.reply('la naiba');
     } 
-    if ( msg.content.strstr("kings") || msg.content.strstr("regi")){  
+    if ( msg.content.strstr("king moment") || msg.content.strstr("regi")){  
         if ( Math.random < 0.2)
         {
             setTimeout(function(){  msg.reply('truuuue!'); }, 1000);
@@ -478,4 +490,5 @@ function Morning_alarm() {
     if ((y - 6) % 24 == 0)
         channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
 }
+
 bot.login(token);
