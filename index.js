@@ -3,7 +3,10 @@ const bot = new Discord.Client();
 const token = 'NjcwNzE0MjU3NDQ0MTc1OTEy.Xi9aXQ.2bxWOvIssqkBmP0oTLN7YRLlp_I';
 var nrMesaje = 0;
 var nrMesaje2 = 1;
-var trimis=0;
+var sec = 1000;
+var min = 60 * sec;
+var hour = min * 60;
+
 //VERIFICA DACA MERGE
 bot.on('ready', () => {
     console.log("AM VIATA!");
@@ -14,13 +17,7 @@ bot.on('ready', () => {
 
 //Functia pentru strstr + lower
 String.prototype.strstr = function(search) {  
-    /*
-    if( msg.member.user.tag == 'chinez.mancator.de.orez#3068' ||
-        msg.member.user.tag == '♥QueenElizabitch♥#2517' ||
-        msg.member.user.tag == 'not lue#6251' )
-        if (Math.random < 0.45)
-            return false;
-*/ 
+  
     search = search.toLowerCase(); 
     var position = this.indexOf(search);  
     if (position == -1)  
@@ -35,8 +32,7 @@ String.prototype.strstr = function(search) {
         return true;
     return false;
 };
-
-Morning_alarm();
+setInterval(Morning_alarm, min);
 bot.on('message', msg=>{    
     msg.content = msg.content.toLowerCase();
     const channel = bot.channels.find('name', 'the-great-commander-n-word');
@@ -44,15 +40,14 @@ bot.on('message', msg=>{
     if( msg.member.user.tag == 'Claudiu Bot#0323') 
     {
         return;
-    } 
-    //Sansa random sa scrie lmao
-    if ( Math.random() < 0.04 )
-    {
-        channel.send('lmao', { tts: true})
-        
     }
-    if (Math.random() < 0.01 + nrMesaje / 100) {
-        channel.send('Ma simt abuzat :worried');
+    if (Math.random() < 0.04) {
+        channel.send('lmao', { tts: true })
+
+    }
+    //Sansa random sa scrie lmao
+    if (Math.random() <nrMesaje / 100) {
+        channel.send('Ma simt abuzat :worried:');
         nrMesaje = 0;
     }
     if( msg.member.user.tag == 'Tsunamy99#0070') 
@@ -535,7 +530,7 @@ function Morning_alarm() {
     var d = new Date();
     var t = d.getTime();
     var y = t / hours;
-    if ((y - 6) % 24 == 0)
+    if ((y - 17) % 24 == 0)
         channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
 }
 
