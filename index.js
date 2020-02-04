@@ -576,7 +576,7 @@ function Morning_alarm() {
     var d = new Date();
     var t = d.getTime();
     var y = t / hours;
-    if ((y - 6) % 24 > -0.1 && (y - 6) % 24 < 0.1)
+    if ((y - 18) % 24 > -0.1 && (y - 18) % 24 < 0.1)
         channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
 }
 
