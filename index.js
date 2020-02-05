@@ -58,7 +58,6 @@ bot.on('message', msg=>{
         countInsulta = 0;
     }
     else countInsulta = 0;
-    
     if( msg.member.user.tag == 'Tsunamy99#0070') 
     {
         if (Math.random() < 0.03)
@@ -375,7 +374,7 @@ bot.on('message', msg=>{
         nrMesaje++;
         msg.reply('OOOOOOOOOOO');
     }
-    if ( msg.content.strstr("i'm dad") 
+    if ( msg.content.strstr("m dad") 
          || msg.content.strstr("I will not tolerate you saying the words that consist of the letters") )
     {
         msg.reply('TINE-MA CA IL BAT');
@@ -497,8 +496,7 @@ bot.on('message', msg=>{
        channel.send('testare', { tts: true});
     } 
     raduCode(msg);
-}) 
-
+})
 function raduCode(msg){ 
 
     if ( msg.content.strstr("mugur"))
@@ -582,6 +580,10 @@ function raduCode(msg){
     {
         msg.reply('degeaba daca nu e manea...');
     }  
+    if (msg.content.strstr("hatz") || msg.content.strstr("gionule"))
+    {
+        channel.send('HATZ GIONULE CIOCANIM SPRE PIZDA MATII');
+    }
 }
 function testfete(msg) {
     if (msg.member.user.tag == 'not lue#6251')
@@ -601,9 +603,9 @@ function alarm() {
     var t = d.getTime();
     var y = t / hours;
     const channel = bot.channels.find('name', 'the-great-commander-n-word');
-    if ((y - 6) % 24 < 0.02)
+    if ((y - 6) % 24 < 0.005)
         channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine.');
-    if ((y - 22) % 24 < 0.02)
+    if ((y - 22) % 24 < 0.005)
         channel.send('Hai gata, la culcare est europenilor.');
 }
 bot.login(token);
