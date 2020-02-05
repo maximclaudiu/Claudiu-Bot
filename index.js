@@ -34,7 +34,10 @@ String.prototype.strstr = function(search) {
     return false;
 };
 //Top of the morning to you ladies
-setInterval(alarm, min);
+setInterval(function () {
+    alarm();
+    resetmsg();
+}, min);
 bot.on('message', msg=>{    
     msg.content = msg.content.toLowerCase();
     var countInsulta;
@@ -49,7 +52,7 @@ bot.on('message', msg=>{
 
     }
     //Sansa random sa scrie lmao
-    if (Math.random() < nrMesaje / 100 && countInsulta == 1) {
+    if (nrMesaje==10 && countInsulta == 1) {
         channel.send('Ma simt abuzat :worried:');
         nrMesaje = 0;
         countInsulta = 0;
@@ -604,5 +607,7 @@ function alarm() {
     if ((y - 22) % 24 < 0.02)
         channel.send('Hai gata, la culcare est europenilor.');
 }
-
+function resetmsg() {
+    nrMesaje = 0;
+}
 bot.login(token);
