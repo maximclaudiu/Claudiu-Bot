@@ -12,8 +12,8 @@ var janken = 0;
 bot.on('ready', () => {
     console.log("AM VIATA!");
     const channel = bot.channels.find('name', 'the-great-commander-n-word');
-    channel.send('Hell yeah, am fost actualizat');
-    setTimeout(function(){ channel.send('Dar nimanui nu-i pasa :sob:'); }, 3000);
+   // channel.send('Hell yeah, am fost actualizat');
+   // setTimeout(function(){ channel.send('Dar nimanui nu-i pasa :sob:'); }, 3000);
 });
 
 //Functia pentru strstr + lower
@@ -310,9 +310,9 @@ bot.on('message', msg=>{
         nrMesaje++;
         msg.reply('make me');
     } 
-    if (msg.content.strstr("mrr")||msg.conetnt.strstr("kinky"))
+    if (msg.content.strstr("mrr")||msg.content.strstr("kinky"))
     {
-        channel.send ('HORNY ALERT!!!')
+        channel.send('HORNY ALERT!!!');
     }
     if ( msg.content.strstr("baby") || msg.content.strstr("bb") || msg.content.strstr("bby") )
     {
