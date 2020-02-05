@@ -34,7 +34,7 @@ String.prototype.strstr = function(search) {
     return false;
 };
 //Top of the morning to you ladies
-setInterval(Morning_alarm, min);
+setInterval(alarm, min);
 bot.on('message', msg=>{    
     msg.content = msg.content.toLowerCase();
     var countInsulta;
@@ -304,6 +304,10 @@ bot.on('message', msg=>{
         nrMesaje++;
         msg.reply('make me');
     } 
+    if (msg.content.strstr("mrr")||msg.conetnt.strstr("kinky"))
+    {
+        channel.send ('HORNY ALERT!!!')
+    }
     if ( msg.content.strstr("baby") || msg.content.strstr("bb") || msg.content.strstr("bby") )
     {
         countInsulta = 1;
@@ -541,8 +545,7 @@ function raduCode(msg){
     {
         countInsulta = 1;
         nrMesaje++;
-        var r = Math.random();
-        if (r<0.5)
+        if (Math.random()<0.5)
             msg.reply('pai ce mai astepti?');
         else 
             msg.reply('mai bine tu decat eu...');
@@ -587,7 +590,7 @@ function testfete(msg) {
         return 1;
     return 0;
 }
-function Morning_alarm() {
+function alarm() {
     var minutes = 1000 * 60;
     var hours = minutes * 60;
     var days = hours * 24;
@@ -596,8 +599,10 @@ function Morning_alarm() {
     var t = d.getTime();
     var y = t / hours;
     const channel = bot.channels.find('name', 'the-great-commander-n-word');
-    if ((y - 6) % 24 > -0.06 && (y - 6) % 24 < 0.06)
-        channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine')
+    if ((y - 6) % 24 < 0.02)
+        channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine.');
+    if ((y - 22) % 24 < 0.02)
+        channel.send('Hai gata, la culcare est europenilor.');
 }
 
 bot.login(token);
