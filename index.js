@@ -421,7 +421,7 @@ bot.on('message', msg=>{
         || msg.content.strstr("gn")
         || msg.content.strstr("good night"))
     {
-        if (testfete())
+        if (testfete(msg))
             msg.reply('Nb Queen, sleep tight!')
         else 
             msg.reply('Nb King, take care!');
