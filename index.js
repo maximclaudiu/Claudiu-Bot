@@ -495,9 +495,9 @@ bot.on('message', msg=>{
       // channel.join();
        channel.send('testare', { tts: true});
     } 
-    raduCode(msg);
+    raduCode(msg, channel);
 })
-function raduCode(msg){ 
+function raduCode(msg, channel){ 
 
     if ( msg.content.strstr("mugur"))
     {
@@ -582,7 +582,7 @@ function raduCode(msg){
     }  
     if (msg.content.strstr("hatz") || msg.content.strstr("gionule"))
     {
-        channel.send('HATZ GIONULE CIOCANIM SPRE PIZDA MATII');
+        channel.send("HATZ GIONULE CIOCANIM SPRE PIZDA MATII");
     }
 }
 function testfete(msg) {
