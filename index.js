@@ -33,10 +33,10 @@ String.prototype.strstr = function(search) {
         return true;
     return false;
 };
-//Top of the morning to you ladies
+//Top of the morning to you ladies + midnight sleep + abuse bot
 setInterval(function () {
     alarm();
-    resetmsg();
+    nrMesaje = 0;
 }, min);
 bot.on('message', msg=>{    
     msg.content = msg.content.toLowerCase();
@@ -70,7 +70,7 @@ bot.on('message', msg=>{
     {
         if (Math.random() < 0.05)
         {
-            if (Math.random() < 0.05)
+            if (Math.random() < 0.5)
                 msg.reply('love you my king');
             else
                 msg.reply('hai pe Malina!');
@@ -126,7 +126,7 @@ bot.on('message', msg=>{
     }
     if( msg.member.user.tag == 'not lue#6251') 
     { 
-        if (Math.random() < 0.7)
+        if (Math.random() < 0.6)
         {
             if (Math.random()<0.3)
                 msg.reply('Da-l afara pe impostor pls');
@@ -146,7 +146,6 @@ bot.on('message', msg=>{
             else
                 channel.send('Give me the plant!');
         }
-
     } 
     if( msg.member.user.tag == 'Wircea#0011') 
     {
@@ -179,9 +178,13 @@ bot.on('message', msg=>{
     }
     if ( msg.member.user.tag == 'Beerghelea#5912' )
     {
-        if (Math.random() < 0.08)
-        {
+        var r = Math.random();
+        if (r < 0.04) {
             msg.reply('e ok, eu te apreciez king!');
+        }
+        else if (r < 0.08)
+        {
+            msg.reply('Pls cure the chinese virus');
         }
     }
     //Raspunde acordingly
@@ -326,10 +329,10 @@ bot.on('message', msg=>{
         nrMesaje++;
         msg.reply("\"voiam\"*");
     }
-        if (msg.content.strstr("drepturi"))
+    if (msg.content.strstr("drepturi"))
     {
-            countInsulta = 1;
-            nrMesaje++;
+        countInsulta = 1;
+        nrMesaje++;
         msg.reply('regii mei au drepturi depline, cat timp nu-s feme');
     }
 
@@ -377,14 +380,12 @@ bot.on('message', msg=>{
     {
         msg.reply('TINE-MA CA IL BAT');
     }
-
     if (msg.content.strstr("prostule"))
     {
         countInsulta = 1;
         nrMesaje++;
         msg.reply('Taci fa din gura!!');
     }
-
     if (msg.content.strstr("mare")
         ||msg.content.strstr("big"))
     {
@@ -392,7 +393,6 @@ bot.on('message', msg=>{
         nrMesaje++;
         msg.reply('Ma intreb ce altceva mai e mare, hmm...');
     }
-
     if ( msg.content.strstr("iubesc") && ( msg.content.strstr("claudiu") || msg.content.strstr("botu") || msg.content.strstr("botul") ) )
     {
         countInsulta = 1;
@@ -409,7 +409,6 @@ bot.on('message', msg=>{
         nrMesaje++;
         msg.reply('always');
     } 
-
     if ( ( msg.content.strstr("bou") || msg.content.strstr("porc") )
              &&  msg.member.user.tag == 'chinez.mancator.de.orez#3068' )
     {
@@ -606,8 +605,5 @@ function alarm() {
         channel.send('@everyone Buna dimineata regi, regine si diana!! Va urez o dimineata la fel de frumoasa precum mine.');
     if ((y - 22) % 24 < 0.02)
         channel.send('Hai gata, la culcare est europenilor.');
-}
-function resetmsg() {
-    nrMesaje = 0;
 }
 bot.login(token);
