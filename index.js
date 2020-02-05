@@ -58,7 +58,7 @@ bot.on('message', msg=>{
     
     if( msg.member.user.tag == 'Tsunamy99#0070') 
     {
-        if (Math.random() < 0.04)
+        if (Math.random() < 0.03)
         {
             channel.send('clona mea a trimis mesajul');
         }
@@ -123,11 +123,11 @@ bot.on('message', msg=>{
     }
     if( msg.member.user.tag == 'not lue#6251') 
     { 
-        if (Math.random() < 0.9)
+        if (Math.random() < 0.7)
         {
             if (Math.random()<0.3)
                 msg.reply('Da-l afara pe impostor pls');
-            else if (Math.random()<0.6)
+            else if (Math.random()<0.4)
                 channel.send('\"Sunt italianca si am drepturi\"')
             else 
                 channel.send ('Oh nu, iar imi iau bully :worried:')
@@ -265,7 +265,7 @@ bot.on('message', msg=>{
     if (msg.content.strstr("hai")) {
         countInsulta = 1;
         nrMesaje++;
-        if (Math.random()<0.8)
+        if (Math.random()<0.7)
             if (testfete(msg) != 1) {
                 var r = Math.random()
                 if (r < 0.33)
@@ -415,7 +415,10 @@ bot.on('message', msg=>{
         || msg.content.strstr("gn")
         || msg.content.strstr("good night"))
     {
-        msg.reply('nb king, take care!');
+        if (testfete())
+            msg.reply('Nb Queen, sleep tight!')
+        else 
+            msg.reply('Nb King, take care!');
     }
     if ( msg.content.strstr("femei") )
     {
