@@ -13,7 +13,7 @@ bot.on('ready', () => {
     console.log("AM VIATA!");
     const channel = bot.channels.find('name', 'the-great-commander-n-word');
     channel.send('Hell yeah, am fost actualizat');
-    setTimeout(function(){ channel.send('Dar nimanui nu-i pasa :sob:'); }, 4000);
+    setTimeout(function(){ channel.send('Dar nimanui nu-i pasa :sob:'); }, 3000);
 });
 
 //Functia pentru strstr + lower
